@@ -4,7 +4,7 @@
 
 // export async function GET() {
 //     try {
-//         const result = await sql`CREATE TABLE yyy (_id varchar(255), avatar varchar(255), name varchar(255), description varchar(255), age int, dislike boolean ,CreatedAt TIMESTAMP );`;
+//         const result = await sql`CREATE TABLE iii (_id varchar(255), avatar varchar(255), name varchar(255), description varchar(255), age int, dislike boolean ,CreatedAt TIMESTAMP );`;
 //         revalidatePath('/page/home');
 //         return NextResponse.json({ result }, { status: 200 });
 //     } catch (error) {
