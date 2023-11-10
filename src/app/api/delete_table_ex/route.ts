@@ -5,9 +5,7 @@
 
 // export async function GET() {
 //     try {
-//         await sql`DROP TABLE blog`;
-//         // console.log('delete');
-//         // await sql`DELETE FROM aaa`;
+//         await sql`DROP TABLE myblog`;
 //         revalidatePath('/page/home');
 //         return NextResponse.json({ message: 'Delete Successfully' }, { status: 200 });
 //     } catch (error) {
