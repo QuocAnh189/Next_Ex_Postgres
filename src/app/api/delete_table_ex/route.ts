@@ -3,7 +3,7 @@ import { revalidatePath } from 'next/cache';
 import { NextResponse } from 'next/server';
 
 
-async function GET() {
+export default async function GET() {
     try {
         await sql`DROP TABLE aaa`;
         // console.log('delete');
