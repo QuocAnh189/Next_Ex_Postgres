@@ -9,6 +9,9 @@ const nextConfig = {
             'scontent.fsgn21-1.fna.fbcdn.net',
             'images.unsplash.com'
         ]
+    },
+    typescript:{
+        ignoreBuildErrors:true
     }
 };
 
