@@ -5,7 +5,7 @@ import { revalidatePath } from 'next/cache';
 
 export const getEx = async (id: string) => {
     try {
-        const data: any = await sql`SELECT * FROM aaa WHERE _id=${id}`;
+        const data: any = await sql`SELECT * FROM yyy WHERE _id=${id}`;
         const { rows: ex } = data;
         return ex;
     } catch (error) {
@@ -15,7 +15,7 @@ export const getEx = async (id: string) => {
 
 export const getExs = async () => {
     try {
-        const data: any = await sql`SELECT * FROM aaa`;
+        const data: any = await sql`SELECT * FROM yyy`;
         const { rows: exs } = data;
         return exs;
     } catch (error) {
@@ -25,7 +25,7 @@ export const getExs = async () => {
 
 export const createEx = async (formValues: IBlog) => {
     try {
-        const result = await sql`INSERT INTO aaa (_id, avatar, name, description, age, CreatedAt) VALUES (${formValues._id},${formValues.avatar},${
+        const result = await sql`INSERT INTO yyy (_id, avatar, name, description, age, CreatedAt) VALUES (${formValues._id},${formValues.avatar},${
             formValues.name
         },${formValues.description},${formValues.age},${JSON.stringify(new Date())});`;
         revalidatePath('/page/home');
@@ -38,7 +38,7 @@ export const createEx = async (formValues: IBlog) => {
 
 export const updateEx = async (blog: IBlog) => {
     try {
-        await sql`UPDATE aaa SET name=${blog.name},avatar=${blog.avatar},age=${blog.age},description=${blog.description} WHERE _id = ${blog._id}`;
+        await sql`UPDATE yyy SET name=${blog.name},avatar=${blog.avatar},age=${blog.age},description=${blog.description} WHERE _id = ${blog._id}`;
         revalidatePath('/page/home');
         return 'success';
     } catch (error) {
@@ -49,7 +49,7 @@ export const updateEx = async (blog: IBlog) => {
 
 export const changeDisLikeEx = async (id: string, dislike: boolean) => {
     try {
-        await sql`UPDATE aaa SET dislike = ${dislike} WHERE _id = ${id}`;
+        await sql`UPDATE yyy SET dislike = ${dislike} WHERE _id = ${id}`;
         revalidatePath('/page/home');
         return 'success';
     } catch (error) {
@@ -60,7 +60,7 @@ export const changeDisLikeEx = async (id: string, dislike: boolean) => {
 
 export const deleteEx = async (id: string) => {
     try {
-        await sql`DELETE FROM aaa WHERE _id=${id};`;
+        await sql`DELETE FROM yyy WHERE _id=${id};`;
         revalidatePath('/page/home');
         return 'Success';
     } catch (error) {

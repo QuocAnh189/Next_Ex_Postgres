@@ -5,7 +5,7 @@ import { NextResponse } from 'next/server';
 
 export async function GET() {
     try {
-        await sql`DROP TABLE aaa`;
+        await sql`DROP TABLE yyy`;
         // console.log('delete');
         // await sql`DELETE FROM aaa`;
         revalidatePath('/page/home');
