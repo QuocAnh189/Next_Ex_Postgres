@@ -5,7 +5,7 @@
 
 // export async function GET() {
 //     try {
-//         await sql`DROP TABLE uuu`;
+//         await sql`DROP TABLE blog`;
 //         // console.log('delete');
 //         // await sql`DELETE FROM aaa`;
 //         revalidatePath('/page/home');
