@@ -2,7 +2,8 @@ import { sql } from '@vercel/postgres';
 import { revalidatePath } from 'next/cache';
 import { NextResponse } from 'next/server';
 
-export async function GET() {
+
+async function GET() {
     try {
         await sql`DROP TABLE aaa`;
         // console.log('delete');
